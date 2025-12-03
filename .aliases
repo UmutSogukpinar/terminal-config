@@ -1,0 +1,57 @@
+# ------------------------------------
+# GIT SHORTCUTS
+# ------------------------------------
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit -m'
+alias gp='git push'
+alias gl='git pull'
+alias gd='git diff'
+alias gco='git checkout'
+alias gb='git branch'
+
+# Undo last commit (keep changes staged)
+alias gundo='git reset --soft HEAD~1'
+
+# Git Log - Colorful and Graphical (One-line format)
+alias glog='git log --graph --oneline --decorate --all'
+
+# ------------------------------------
+# DOCKER SHORTCUTS
+# ------------------------------------
+alias d='docker'
+alias dc='docker-compose'
+
+# Docker Compose Operations
+alias dcu='docker-compose up -d'      # Start services in detached mode
+alias dcd='docker-compose down'       # Stop and remove containers/networks
+alias dcl='docker-compose logs -f'    # Follow logs
+alias dcr='docker-compose restart'
+
+# Docker Container List (Cleaner table format)
+alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
+alias dpsa='docker ps -a'
+
+# Docker Cleanup
+# Prune system (delete stopped containers, unused networks/images)
+alias dprune='docker system prune -f'
+# Remove only containers with "Exited" status
+alias drm_exited='docker rm $(docker ps -a -q -f status=exited)'
+
+# ------------------------------------
+# GENERAL UTILITIES
+# ------------------------------------
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias c='clear'
+alias h='history'
+
+# Check which process is using a specific port (Usage: port 8080)
+function port() {
+    lsof -i :$1
+}
