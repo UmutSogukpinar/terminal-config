@@ -1,3 +1,34 @@
+# 🚀 Dev Aliases
+
+A collection of useful bash/zsh aliases to make your daily Git and Docker workflow faster and easier.
+
+## Features
+- 🎨 **Better Git Log:** Visualize your commit history cleanly.
+- 🐳 **Clean Docker Output:** readable tables for `docker ps`.
+- ⚡ **Productivity:** Shortcuts for common commands like `dcu` (docker-compose up) or `gs` (git status).
+
+## 🚀 How to Run
+
+You can install these aliases automatically using the `init.sh` script.
+
+1. **Clone the repository:**
+
+   ```
+   git clone [https://github.com/UmutSogukpinar/terminal-config.git] 'YOUR_REPO_NAME'
+   
+   cd 'YOUR_REPO_NAME'
+
+2. **Run the installation script**
+
+   ```bash
+   chmod +x init.sh
+   
+    ./init.sh
+   ```
+   
+3. **Restart your terminal**
+
+
 ## Cheat Sheet
 
 ### 🐙 Git Shortcuts
